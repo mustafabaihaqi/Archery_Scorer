@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,6 @@ namespace ArcheryScorer
         string type;
         double drawWeight;
         double drawLength;
-        double fps;
 
         public string Brand { get => brand; }
         public string Name { get => name; }

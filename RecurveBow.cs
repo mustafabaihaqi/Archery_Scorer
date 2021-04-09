@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,10 @@ namespace ArcheryScorer
 
         public RecurveBow(string brand, string name, string type, double drawWeight, double drawLength)
         {
+            
         }
+
+        
 
         public override double SpeedRating(double drawLength, double drawWeight)
         {

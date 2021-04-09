@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ArcheryScorer
 {
@@ -9,10 +9,10 @@ namespace ArcheryScorer
             Console.WriteLine("Selamat datang di ArcheryScorer!");
 
             Console.WriteLine("Merk busur?");
-            string brand = Console.ReadLine();
+            string Brand = Console.ReadLine();
 
             Console.WriteLine("Model busur?");
-            string name = Console.ReadLine();
+            string Name = Console.ReadLine();
 
             Console.WriteLine("Tipe busur?\n1:Compound\n2:Recurve");
             string Type = Console.ReadLine();
@@ -23,17 +23,17 @@ namespace ArcheryScorer
                 Type = "Recurve";
 
             Console.WriteLine("Panjang tarikan? (inch)");
-            double drawLength = Convert.ToDouble(Console.ReadLine());
+            double DrawLength = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Berat tarikan? (lbs)");
-            double drawWeight = Convert.ToDouble(Console.ReadLine());
+            double DrawWeight = Convert.ToDouble(Console.ReadLine());
 
-            Bow Compound = new Bow(brand, name, Type, drawLength, drawWeight);
-            RecurveBow Recurve = new RecurveBow(brand, name, Type, drawLength, drawWeight);
+            Bow Compound = new Bow(Brand, Name, Type, DrawLength, DrawWeight);
+            RecurveBow Recurve = new RecurveBow(Brand, Name, Type, DrawLength, DrawWeight);
 
             int jumlah = 0;
             int A = 0;
-            double ratarata = 0;
+            decimal ratarata = 0;
 
             Console.WriteLine("Masukkan nilai skor anda per rambahan");
 
@@ -56,14 +56,14 @@ namespace ArcheryScorer
             {
                 Compound.showBowInformation();
 
-                double speed = Compound.SpeedRating(drawLength, drawWeight);
+                double speed = Compound.SpeedRating(DrawLength, DrawWeight);
                 Console.WriteLine("Rating kecepatan dari busur ini adalah {0} fps", speed);
             }
             else
             {
-                Recurve.showBowInformation();
-
-                double speed = Recurve.SpeedRating(drawLength, drawWeight);
+                Console.WriteLine("Busur anda adalah {2} {0} {1} dengan {3} lbs draw weight dan {4} inch draw length", Brand, Name, Type, DrawWeight, DrawLength);
+            
+                double speed = Recurve.SpeedRating(DrawLength, DrawWeight);
                 Console.WriteLine("Rating kecepatan dari busur ini adalah {0} fps", speed);
             }
         }

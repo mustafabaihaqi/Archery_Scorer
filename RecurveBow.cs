@@ -16,11 +16,6 @@ namespace ArcheryScorer
         {
         }
 
-        public override void showBowInformation()
-        {
-            Console.WriteLine("Busur anda adalah {2} {0} {1} dengan {3} lbs draw weight dan {4} inch draw length", Brand, Name, Type, DrawWeight, Drawlength);
-        }
-
         public override double SpeedRating(double drawLength, double drawWeight)
         {
             double speed = 0;
